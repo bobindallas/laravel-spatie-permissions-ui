@@ -8,7 +8,7 @@
 	@section('content')
 	<div class="container">
 	@can('create_users')
-	 <a href="{{ route('users.create') }}" title="Add New User"><i class="fa fa-plus-circle fa-2x"></i></a><br />
+	 <div style="float:right;padding-right:20px;"><a href="{{ route('users.create') }}" title="Add New User"><i class="fa fa-plus-circle fa-2x"></i></a><br /><br /></div>
 	@endcan
 		<div class="card-body">
 			@if (count($users))

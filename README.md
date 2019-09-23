@@ -12,7 +12,7 @@ We're using:
 #### Install Instructions:
 
 1) clone repo
-2) composer update - install the rest of the required code
+2) composer install (or update) - install the rest of the required code
 3) create your database (mysql)
 4) copy .env.example to .env
 5) php artisan key:generate - set the application key 

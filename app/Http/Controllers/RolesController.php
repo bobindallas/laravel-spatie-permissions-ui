@@ -22,7 +22,6 @@ class RolesController extends Controller {
 		$this->check_permission('view_roles');
 
 		$roles = Role::all();
-
 		return view('roles.index', compact('roles'));
 
 	}
@@ -89,13 +88,10 @@ class RolesController extends Controller {
 
 		$this->check_permission('edit_roles');
 
-		$role = Role::findOrFail($id);
+		$role        = Role::findOrFail($id);
 		$permissions = Permission::all();
 
-		return view('roles.edit')->with([
-			'role'        => $role,
-			'permissions' => $permissions
-		]);
+		return view('roles.edit', compact('role', 'permissions'));
 
 	}
 

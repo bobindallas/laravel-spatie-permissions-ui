@@ -21,10 +21,7 @@ class UsersController extends Controller {
 	public function index() {
 
 		$users = User::all();
-
-		return view('users.index', compact(
-			'users'
-		));
+		return view('users.index', compact('users'));
 
 	}
 
@@ -38,10 +35,7 @@ class UsersController extends Controller {
 		$permissions = Permission::all()->pluck('name');
 		$roles       = Role::all()->pluck('name', 'id');
 
-		return view('users.create', compact(
-			'permissions',
-			'roles'
-		));
+		return view('users.create', compact('permissions', 'roles'));
 	}
 
 	/**
@@ -67,9 +61,7 @@ class UsersController extends Controller {
 		// Handle the user roles
 		$this->syncPermissions($request, $user);
 
-		return redirect()->route('users.index')->with([
-		   'success', 'User Saved'
-		]);
+		return redirect()->route('users.index')->with(['success', 'User Saved']);
 
 	}
 
@@ -173,7 +165,6 @@ class UsersController extends Controller {
 			$user->permissions()->sync([]);
 
 		} else {
-
 			// handle permissions
 			$user->syncPermissions($permissions);
 

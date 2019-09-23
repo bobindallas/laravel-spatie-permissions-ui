@@ -1,6 +1,6 @@
 # Permissions Basic UI
 
-This is a super basic UI for the [Spatie Roles and Permissions Laravel package] (https://github.com/spatie/laravel-permission).  There are others out there but the few I looked at did not have a UI for maintaining Permissions which I want so I wrote this one.
+This is a super basic UI for the [Spatie Roles and Permissions Laravel package](https://github.com/spatie/laravel-permission).  There are others out there but the few I looked at did not have a UI for maintaining Permissions which I want so I wrote this one.
 
 We're using:
 

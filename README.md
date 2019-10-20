@@ -17,12 +17,16 @@ We're using:
 4) copy .env.example to .env
 5) php artisan key:generate - set the application key 
 6) edit .env to set your db name and credentials
-7) php artisan:migrate (or migrate:refresh to clear tables) - run migrations to create tables
+7) php artisan migrate (or migrate:refresh to clear tables) - run migrations to create tables
 8) optionally edit databases/seeds/UsersTableSeeder.php to add / change the default users prior to seeding.  Leave the default Roles and Permissions as you can edit them later.
 9) php artisan db:seed - this will give you the option to run migrate:refresh
 10) login using default Superuser account =>  login: super@email.com password: secret
 
 #### Notes:
+
+* UPDATE: In keeping with Laravel convention I've changed the Superuser role to ignore permissions - so the Superuser role can do anything, so no need to set permissions on the role.  I'll update the screens to reflect this later - or you can do it on your site.  The change is in: app/Providers/AuthServiceProvider.php in the boot() function.
+Details here: https://docs.spatie.be/laravel-permission/v3/basic-usage/super-admin/
+
 * In the App/Controller base class is a function called check_permission that checks permissions for various actions on controllers.  You can edit this to always return true for development to turn off permission checks.
 
 * In the resources/views/layouts/app.blade.php layout are a few permission related @can directives to control menu items - change or remove these as needed.

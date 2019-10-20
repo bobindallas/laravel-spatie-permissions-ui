@@ -24,7 +24,8 @@ We're using:
 
 #### Notes:
 
-* UPDATE: In keeping with Laravel convention I've changed the Superuser role to ignore permissions - so the Superuser role can do anything, so no need to set permissions on the role.  I'll update the screens to reflect this later - or you can do it on your site.  The change is in: app/Providers/AuthServiceProvider.php in the boot() function.
+* UPDATE: In keeping with Laravel convention I've changed the Superuser role to ignore permissions - so the Superuser role can do anything, so no need to set permissions on the role.  I'll update the screens to reflect this later - or you can do it on your site.  The change is in: app/Providers/AuthServiceProvider.php in the boot() function.  
+  
 Details here: https://docs.spatie.be/laravel-permission/v3/basic-usage/super-admin/
 
 * In the App/Controller base class is a function called check_permission that checks permissions for various actions on controllers.  You can edit this to always return true for development to turn off permission checks.

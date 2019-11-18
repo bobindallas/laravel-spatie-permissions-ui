@@ -24,11 +24,7 @@ class PermissionsTableSeeder extends Seeder {
 			 ['name' => 'create_users',       'description' => '', 'guard_name' => 'web'],
 			 ['name' => 'edit_users',         'description' => '', 'guard_name' => 'web'],
 			 ['name' => 'view_users',         'description' => '', 'guard_name' => 'web'],
-			 ['name' => 'delete_users',       'description' => '', 'guard_name' => 'web'],
-			 ['name' => 'create_roles',       'description' => '', 'guard_name' => 'web'],
-			 ['name' => 'edit_roles',         'description' => '', 'guard_name' => 'web'],
-			 ['name' => 'view_roles',         'description' => '', 'guard_name' => 'web'],
-			 ['name' => 'delete_roles',       'description' => '', 'guard_name' => 'web']
+			 ['name' => 'delete_users',       'description' => '', 'guard_name' => 'web']
 		 ];
 
 		 foreach ($perms as $perm) {

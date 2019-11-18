@@ -34,7 +34,7 @@
 					<td>
 					{{-- <a href="{{ route('roles.show', ['role' => $role->id]) }}" title="View Role Details"><i class="fa fa-info-circle fa-2x"></i></a>&nbsp;&nbsp; --}}
 					@can('edit_roles')
-					<button><a href="{{ route('roles.edit', ['role' => $role->id]) }}" title="Edit Role Details"><i class="fa fa-pencil-square fa-2x"></i></a></button>&nbsp;&nbsp;
+					<a href="{{ route('roles.edit', ['role' => $role->id]) }}" title="Edit Role Details"><i class="fa fa-pencil-square fa-2x"></i></a>&nbsp;&nbsp;
 					@endcan
 				{{-- <a href="{{ route('roles.destroy', ['role' => $role->id]) }}" title="Remove Role"><i class="fa fa-trash fa-2x"></i></a> --}}
 				</td>

@@ -32,7 +32,7 @@
 					<td>
 					{{-- <a href="{{ route('permissions.show', ['permission' => $permission->id]) }}" title="View Permission Details"><i class="fa fa-info-circle fa-2x"></i></a>&nbsp;&nbsp; --}}
 					@can('edit_permissions')
-					<button><a href="{{ route('permissions.edit', ['permission' => $permission->id]) }}" title="Edit Permission Details"><i class="fa fa-pencil-square fa-2x"></i></a></button>&nbsp;&nbsp;
+					<a href="{{ route('permissions.edit', ['permission' => $permission->id]) }}" title="Edit Permission Details"><i class="fa fa-pencil-square fa-2x"></i></a>&nbsp;&nbsp;
 					@endcan
 				{{-- <a href="{{ route('permissions.destroy', ['permission' => $permission->id]) }}" title="Remove Permission"><i class="fa fa-trash fa-2x"></i></a> --}}
 				</td>

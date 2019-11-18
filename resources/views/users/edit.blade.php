@@ -29,4 +29,39 @@
 		<input type="submit" value="Submit" class="btn btn-primary">
 	</form>
 	</div>
-@endsection
+@stop
+
+@section('js')
+<script>
+$('#roles').DataTable({
+  "pageLength": 25,
+  "paging": true,
+  "lengthChange": true,
+  "searching": true,
+  "ordering": true,
+  "info": true,
+  "autoWidth": false,
+  'columnDefs' : [{
+    'targets' : [-1],
+    'orderable' : false
+   }]
+});
+
+$('#permissions').DataTable({
+  "pageLength": 25,
+  "paging": true,
+  "lengthChange": true,
+  "searching": true,
+  "ordering": true,
+  "info": true,
+  "autoWidth": false,
+  'columnDefs' : [{
+    'targets' : [-1],
+    'orderable' : false
+   }]
+});
+
+</script>
+	@stop
+
+	@push('js')

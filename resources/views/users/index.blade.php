@@ -34,10 +34,10 @@
 				{{-- <a href="{{ route('users.show', ['user' => $user->id]) }}" title="View User Details"><i class="fa fa-info-circle fa-2x"></i></a>&nbsp;&nbsp; --}}
 					@endcan
 					@can('edit_users')
-					<button class=""><a href="{{ route('users.edit', ['user' => $user->id]) }}" title="Edit User Details"><i class="fa fa-pencil-square fa-2x"></i></a></button>
+					<a href="{{ route('users.edit', ['user' => $user->id]) }}" title="Edit User Details"><i class="fa fa-pencil-square fa-2x"></i></a>
 					@endcan
 					@can('delete_users')
-					<form method="post" action="{{ route('users.destroy', ['user' => $user->id]) }}" style="display:inline-block;">@csrf @method('DELETE')<button class="" onclick="return confirm('Really delete this user?')" title="Delete this User"><i class="fa fa-trash fa-2x" style="color:red;"></i></button></form>
+					<form method="post" action="{{ route('users.destroy', ['user' => $user->id]) }}" style="display:inline;">@csrf @method('DELETE') <a onclick="if(confirm('Really delete this user?')) { this.parentNode.submit(); }" title="Delete this User"><i class="fa fa-trash fa-2x" style="color:red;"></i></a></form>
 					@endcan
 				</td>
 				</tr>

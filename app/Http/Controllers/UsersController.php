@@ -85,8 +85,10 @@ class UsersController extends Controller {
 	public function edit(Request $request, $id) {
 
 		$user             = User::findOrFail($id);
-		$permissions      = Permission::all()->pluck('name');
-		$roles            = Role::all()->pluck('name', 'id');
+		$permissions      = Permission::all();
+		// $permissions      = Permission::all()->pluck('name');
+		// $roles            = Role::all()->pluck('name', 'id');
+		$roles            = Role::all();
 		$user_roles       = $user->getRoleNames();
 		$user_permissions = $user->getDirectPermissions();
 

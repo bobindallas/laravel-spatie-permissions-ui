@@ -1,12 +1,23 @@
 <div class="form-group">
 	<div class="card border">
-		<div class="card-title border-bottom" style="padding-left:10px;">
+		<div class="card-title border-bottom" style="padding-left:10px; font-size:1.6em;">
 			Permissions
 		</div>
 		<div class="card-body">
-			<div class="row">
+			<table id="permissions" class="table table-bordered table-hover compact">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Name</th>
+						<th>Guard Name</th>
+						<th>Created</th>
+						<th>Active</th>
+					</tr>
+				</thead>
+				<tbody>
+
 				@foreach ($permissions as $permission)
-					<div class="col-md-3">
+					<tr>
 						<?php
 							$perm_found = null;
 							if( isset($role) ) { 
@@ -16,11 +27,24 @@
 								$perm_found = $user->hasDirectPermission($permission->name);
 							}
 						?>
-						<input type="checkbox" name="permissions[]" id="{{ $permission->name }}" value="{{ $permission->name }}" @if($perm_found) checked @endif>
-						<label for="{{ $permission->name }}">{{ $permission->name }}</label>
-					</div>
+						<td>{{ $permission->id }}</td>
+						<td>{{ $permission->name }}</td>
+						<td>{{ $permission->guard_name }}</td>
+						<td>{{ $permission->created_at->toFormattedDateString() }}</td>
+						<td><input type="checkbox" name="permissions[]" value="{{ $permission->name }}" @if($perm_found) checked @endif></td>
+					</tr>
 				@endforeach
-			</div>
+				</tbody>
+				<tfoot>
+					<tr>
+						<th>ID</th>
+						<th>Name</th>
+						<th>Guard Name</th>
+						<th>Created</th>
+						<th>Active</th>
+					</tr>
+				</tfoot>
+			</table>
 		</div>
 	</div>
 </div>

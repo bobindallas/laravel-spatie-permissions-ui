@@ -24,9 +24,9 @@ We're using:
 
 #### Notes:
 
-* UPDATE [2019/11/18]: Updated the User and Role UI to use datatables for the Permissions list.  This allows you to easily sort and search permissions to make it quicker & easier to set permissions on a user and role.  When you get more than a few roles you need a way to filter them and this works for me at the moment - comments are welcome.
+* UPDATE [2019/11/18]: Updated the User and Role UI to use datatables for the permissions list.  This allows you to easily sort and search permissions to make it quicker & easier to set permissions on a user and role.  When you get more than a few permissions you need a way to filter them and this works for me at the moment.
 
-* UPDATE [2019/11/18]: Spatie by default allows duplicate permission and role names - not sure why - maybe they have a reason.  This caused a problem for me so I added a unique() index to the name column on the "roles" and "permissions" tables - see database/migrations/[timestamp]_create_permission_tables.php
+* UPDATE [2019/11/18]: Spatie by default allows duplicate permission and role names - not sure why - maybe they have a reason.  This caused problems for me so I added a unique() index to the name column on the "roles" and "permissions" tables - see database/migrations/[timestamp]_create_permission_tables.php
 
 * UPDATE: In keeping with Laravel convention I've changed the Superuser role to ignore permissions - so the Superuser role can do anything, no need to set permissions on the role.  I'll update the screens to reflect this later - or you can do it on your site.  The change is in: app/Providers/AuthServiceProvider.php in the boot() function.  
  Details here: https://docs.spatie.be/laravel-permission/v3/basic-usage/super-admin/

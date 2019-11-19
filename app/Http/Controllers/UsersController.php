@@ -82,7 +82,7 @@ class UsersController extends Controller {
 	 * @param  \App\User  $user
 	 * @return \Illuminate\Http\Response
 	 */
-	public function edit(Request $request, $id) {
+	public function edit(Request $request, int $id) {
 
 		$user             = User::findOrFail($id);
 		$permissions      = Permission::all();
@@ -107,7 +107,7 @@ class UsersController extends Controller {
 	 * @param  \App\User  $user
 	 * @return \Illuminate\Http\Response
 	 */
-	public function update(Request $request, $id) {
+	public function update(Request $request, int $id) {
 
 		$user = User::findOrFail($id);
 
@@ -133,7 +133,7 @@ class UsersController extends Controller {
 	 * @param $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function destroy($id) {
+	public function destroy(int $id) {
 
 		$this->check_permission('delete_users');
 

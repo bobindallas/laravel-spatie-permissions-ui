@@ -74,7 +74,7 @@ class PermissionsController extends Controller {
 	 * @param  \App\Permission  $permission
 	 * @return \Illuminate\Http\Response
 	 */
-	public function edit(Request $request, $id) {
+	public function edit(Request $request, int $id) {
 
 		$this->check_permission('edit_permissions');
 
@@ -89,7 +89,7 @@ class PermissionsController extends Controller {
 	 * @param  \App\Permission  $permission
 	 * @return \Illuminate\Http\Response
 	 */
-	public function update(Request $request, $id) {
+	public function update(Request $request, int $id) {
 
 		$this->check_permission('edit_permissions');
 

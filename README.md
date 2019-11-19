@@ -4,10 +4,10 @@ This is a super basic UI for the [Spatie Roles and Permissions Laravel package](
 
 We're using:
 
-* Laravel 6 => https://laravel.com/docs/6.x along with it's associated  [requirements](https://laravel.com/docs/6.x#server-requirements) 
+* Laravel 6 => https://laravel.com/docs/6.x along with it's associated [requirements](https://laravel.com/docs/6.x#server-requirements) 
 * Spatie Permissions => https://github.com/spatie/laravel-permission
 * Laravel Breadcrumbs => https://github.com/davejamesmiller/laravel-breadcrumbs
-* Not included here but recommended for development is [laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
+* Not included here but recommended for development is [laravel-debugbar](https://github.com/barryvdh/laravel-debugbar) or [laravel-telescope](https://laravel.com/docs/6.x/telescope)
 
 #### Install Instructions:
 
@@ -24,7 +24,11 @@ We're using:
 
 #### Notes:
 
-* UPDATE: In keeping with Laravel convention I've changed the Superuser role to ignore permissions - so the Superuser role can do anything, so no need to set permissions on the role.  I'll update the screens to reflect this later - or you can do it on your site.  The change is in: app/Providers/AuthServiceProvider.php in the boot() function.  
+* UPDATE [2019/11/18]: Updated the User and Role UI to use datatables for the Permissions list.  This allows you to easily sort and search permissions to make it quicker & easier to set permissions on a user and role.  When you get more than a few roles you need a way to filter them and this works for me at the moment - comments are welcome.
+
+* UPDATE [2019/11/18]: Spatie by default allows duplicate permission and role names - not sure why - maybe they have a reason.  This caused a problem for me so I added a unique() index to the name column on the "roles" and "permissions" tables - see database/migrations/[timestamp]_create_permission_tables.php
+
+* UPDATE: In keeping with Laravel convention I've changed the Superuser role to ignore permissions - so the Superuser role can do anything, no need to set permissions on the role.  I'll update the screens to reflect this later - or you can do it on your site.  The change is in: app/Providers/AuthServiceProvider.php in the boot() function.  
  Details here: https://docs.spatie.be/laravel-permission/v3/basic-usage/super-admin/
 
 * In the App/Controller base class is a function called check_permission that checks permissions for various actions on controllers.  You can edit this to always return true for development to turn off permission checks.

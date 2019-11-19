@@ -1,6 +1,6 @@
 <div class="form-group">
 	<div class="card border">
-		<div class="card-title border-bottom" style="padding-left:10px; font-size:1.6em;">
+		<div class="card-title border-bottom" style="padding-left:10px; font-size:1.3em; background-color:#e9ecef;">
 			Permissions
 		</div>
 		<div class="card-body">

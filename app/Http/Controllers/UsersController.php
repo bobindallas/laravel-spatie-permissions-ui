@@ -32,8 +32,8 @@ class UsersController extends Controller {
 	 */
 	public function create() {
 
-		$permissions = Permission::all()->pluck('name');
-		$roles       = Role::all()->pluck('name', 'id');
+		$permissions = Permission::all();
+		$roles       = Role::all();
 
 		return view('users.create', compact('permissions', 'roles'));
 	}
@@ -47,7 +47,7 @@ class UsersController extends Controller {
 	public function store(Request $request) {
 
 		$this->validate($request, [
-		   'name'     => 'bail|required|min:2',
+			'name'     => 'bail|required|min:2',
 			'email'    => 'required|email|unique:users',
 			'password' => 'required|min:6'
 		]);
@@ -86,8 +86,6 @@ class UsersController extends Controller {
 
 		$user             = User::findOrFail($id);
 		$permissions      = Permission::all();
-		// $permissions      = Permission::all()->pluck('name');
-		// $roles            = Role::all()->pluck('name', 'id');
 		$roles            = Role::all();
 		$user_roles       = $user->getRoleNames();
 		$user_permissions = $user->getDirectPermissions();

@@ -1,7 +1,7 @@
 <div class="form-group">
 	<div class="card border">
 		<div class="card-title border-bottom" style="padding-left:10px; font-size:1.3em; background-color:#e9ecef;">
-			User Permissions
+			Additional User Permissions
 		</div>
 		<div class="card-body">
 			<table id="permissions" class="table table-bordered table-hover compact">

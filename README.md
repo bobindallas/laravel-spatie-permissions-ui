@@ -22,6 +22,10 @@ We're using:
 9) php artisan db:seed - this will give you the option to run migrate:refresh
 10) login using default Superuser account =>  login: super@email.com password: secret
 
+### Demo:
+
+[BID-SRP](http://jsonbourne.com) - check it out
+
 #### Notes:
 
 * UPDATE [2019/11/18]: Updated the User and Role UI to use datatables for the permissions list.  This allows you to easily sort and search permissions to make it quicker & easier to set permissions on a user and role.  When you get more than a few permissions you need a way to filter them and this works for me at the moment.

@@ -18,6 +18,6 @@ Route::resource('roles','RolesController');
 Route::resource('permissions','PermissionsController');
 Route::resource('users','UsersController');
 
-// Auth::routes(['register' => false]); // hide register link
-Auth::routes(); // hide register link
+Auth::routes(['register' => false]); // hide register link
+// Auth::routes(); // hide register link
 Route::get('/home', 'HomeController@index')->name('home');

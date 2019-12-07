@@ -44,6 +44,30 @@ We're using:
 This was inspired by another project:  
 https://github.com/saqueib/roles-permissions-laravel/tree/v5.7
 
+#### Tests:
+
+Testing is very light at the moment.
+
+We're using sqlite for testing so you'll need sqlite and the PHP driver installed.
+
+I use Ubuntu so to install sqlite:
+
+$ sudo apt-get install sqlite (or sqlite3 if you get an error)
+
+Then you'll need the PHP driver:
+
+sudo apt install php7.[x]-sqlite[x] - depending on your php and sqlite version
+
+For my machine the commands are:
+
+$ sudo apt-get install sqlite3
+$ sudo apt install php7.2-sqlite3
+
+you may need (for sqlite2):
+
+$ sudo apt-get install sqlite
+$ sudo apt install php7.2-sqlite - replace with your php version
+
 #### License:
 
 [MIT license](http://opensource.org/licenses/MIT)

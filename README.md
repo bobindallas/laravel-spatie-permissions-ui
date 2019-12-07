@@ -52,7 +52,7 @@ We're using sqlite for testing so you'll need sqlite and the PHP driver installe
 
 I use Ubuntu so to install sqlite:
 
-$ sudo apt-get install sqlite (or sqlite3 if you get an error)
+* $ sudo apt-get install sqlite (or sqlite3 if you get an error)
 
 Then you'll need the PHP driver:
 

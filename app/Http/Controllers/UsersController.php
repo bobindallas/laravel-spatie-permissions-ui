@@ -20,6 +20,8 @@ class UsersController extends Controller {
 	 */
 	public function index() {
 
+		$this->check_permission('view_users');
+
 		$users = User::all();
 		return view('users.index', compact('users'));
 
@@ -31,6 +33,8 @@ class UsersController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function create() {
+
+		$this->check_permission('create_users');
 
 		$permissions = Permission::all();
 		$roles       = Role::all();
@@ -45,6 +49,8 @@ class UsersController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function store(Request $request) {
+
+		$this->check_permission('create_users');
 
 		$this->validate($request, [
 			'name'     => 'bail|required|min:2',
@@ -84,6 +90,8 @@ class UsersController extends Controller {
 	 */
 	public function edit(Request $request, int $id) {
 
+		$this->check_permission('edit_users');
+
 		$user             = User::findOrFail($id);
 		$permissions      = Permission::all();
 		$roles            = Role::all();
@@ -108,6 +116,8 @@ class UsersController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function update(Request $request, int $id) {
+
+		$this->check_permission('edit_users');
 
 		$user = User::findOrFail($id);
 

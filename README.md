@@ -56,17 +56,17 @@ $ sudo apt-get install sqlite (or sqlite3 if you get an error)
 
 Then you'll need the PHP driver:
 
-sudo apt install php7.[x]-sqlite[x] - depending on your php and sqlite version
+* sudo apt install php7.[x]-sqlite[x] - depending on your php and sqlite version
 
 For my machine the commands are:
 
-$ sudo apt-get install sqlite3
-$ sudo apt install php7.2-sqlite3
+* $ sudo apt-get install sqlite3
+* $ sudo apt install php7.2-sqlite3
 
 you may need (for sqlite2):
 
-$ sudo apt-get install sqlite
-$ sudo apt install php7.2-sqlite - replace with your php version
+* $ sudo apt-get install sqlite
+* $ sudo apt install php7.2-sqlite - replace with your php version
 
 #### License:
 

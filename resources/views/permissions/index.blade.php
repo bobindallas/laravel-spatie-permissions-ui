@@ -12,7 +12,7 @@
 	@endcan
 		<div class="card-body">
 			@if (count($permissions))
-		<table id="permissions" class="table table-bordered table-hover compact">
+		<table id="permissions" class="table table-hover table-responsive-sm table-sm compact">
 			<thead>
 				<tr>
 					<th>ID</th>

@@ -4,7 +4,7 @@
 			Permissions
 		</div>
 		<div class="card-body">
-			<table id="permissions" class="table table-bordered table-hover compact">
+			<table id="permissions" class="table table-hover table-responsive-sm table-sm compact">
 				<thead>
 					<tr>
 						<th>ID</th>

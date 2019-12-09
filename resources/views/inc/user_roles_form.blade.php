@@ -4,7 +4,7 @@
 			User Roles
 		</div>
 		<div class="card-body">
-			<table id="roles" class="table table-bordered table-hover compact">
+			<table id="roles" class="table table-hover table-responsive-sm table-sm compact">
 				<thead>
 					<tr>
 						<th>ID</th>

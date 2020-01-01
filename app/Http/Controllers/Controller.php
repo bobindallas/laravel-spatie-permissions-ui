@@ -16,7 +16,7 @@ class Controller extends BaseController {
 	protected function check_permission($perm = '') {
 
 		if (! auth()->user()->can($perm)) {
-			return abort(403);
+			return abort(403, 'Unauthorized');
 		}
 
 		return true;

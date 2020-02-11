@@ -20,6 +20,24 @@ We're using:
 7) php artisan migrate (or migrate:refresh to clear tables) - run migrations to create tables
 8) optionally edit databases/seeds/UsersTableSeeder.php to add / change the default users prior to seeding.  Leave the default Roles and Permissions as you can edit them later.
 9) php artisan db:seed - this will give you the option to run migrate:refresh
+
+#### Laravel 6 removed the authentication frontend so we have to install it separately:
+
+* composer require laravel/ui --dev
+* npm install && npm run dev (pull in css / js requirements)
+
+#### Generate basic scaffolding (take your pick)...
+
+* php artisan ui bootstrap
+* php artisan ui vue
+* php artisan ui react
+
+#### Generate login / registration scaffolding (take your pick)...
+
+* php artisan ui bootstrap --auth
+* php artisan ui vue --auth
+* php artisan ui react --auth
+
 10) login using default Superuser account =>  login: super@email.com password: secret
 
 ### Demo:
